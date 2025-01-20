@@ -8,13 +8,12 @@ app.use(cors())
 
 app.post('/api', async (req, res)=>{
     const {message} = req.body;
-    console.log("message")
     try{
         const result = await runApi(message)
-        console.log(result)
         return res.status(200).send(result)
     }
-    catch{
+    catch(e){
+        console.log(e)
         return res.status(404).send("an error occured");
     }
 })
