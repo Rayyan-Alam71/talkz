@@ -9,7 +9,7 @@ async function runApi(message){
     "answer like you are in a podcast"+
     "concise your answer in less than 30 words"+message;
     
-    const result = await model.generateContent({ prompt });
+    const result = await model.generateContent( prompt);
 
     // fs.writeFile('example.txt', result.response.text(), 'utf8', (err) => {
     //     if (err) {
